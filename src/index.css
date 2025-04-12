@@ -14,16 +14,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 195 85% 49%;
+    --primary: 218 60% 26%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 195 80% 43%;
+    --secondary: 212 89% 31%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 195 75% 57%;
+    --accent: 223 67% 65%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -31,7 +31,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 195 85% 49%;
+    --ring: 218 60% 26%;
 
     --radius: 0.5rem;
 
@@ -55,16 +55,16 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 195 85% 49%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 218 60% 26%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 195 80% 43%;
+    --secondary: 212 89% 31%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 195 75% 57%;
+    --accent: 223 67% 65%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
@@ -73,6 +73,7 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+    
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -91,24 +92,25 @@
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
 @layer components {
   .service-card {
-    @apply rounded-lg bg-white p-6 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center h-full;
+    @apply rounded-xl bg-white p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center h-full border border-gray-100;
   }
   
   .service-icon {
-    @apply text-4xl mb-4 text-legalsetu-primary;
+    @apply text-4xl mb-4 text-legalsetu-primary bg-legalsetu-lightblue p-3 rounded-full;
   }
   
   .btn-primary {
-    @apply bg-legalsetu-primary text-white px-6 py-2 rounded-md hover:bg-legalsetu-secondary transition-colors duration-200;
+    @apply bg-legalsetu-primary text-white px-6 py-2 rounded-md hover:bg-legalsetu-secondary transition-colors duration-200 shadow-md;
   }
   
   .btn-secondary {
-    @apply bg-white text-legalsetu-primary border border-legalsetu-primary px-6 py-2 rounded-md hover:bg-legalsetu-gray transition-colors duration-200;
+    @apply bg-white text-legalsetu-primary border border-legalsetu-primary px-6 py-2 rounded-md hover:bg-legalsetu-lightblue transition-colors duration-200;
   }
   
   .page-container {
@@ -116,14 +118,28 @@
   }
   
   .section-title {
-    @apply text-3xl font-bold mb-8 text-legalsetu-dark text-center;
+    @apply text-3xl font-bold mb-8 text-legalsetu-primary text-center;
+    position: relative;
+  }
+  
+  .section-title::after {
+    content: '';
+    @apply block h-1 w-20 bg-legalsetu-accent mx-auto mt-2;
   }
   
   .chat-message-user {
-    @apply bg-legalsetu-gray text-legalsetu-dark p-4 rounded-lg rounded-tl-none max-w-[80%] self-start mb-4;
+    @apply bg-legalsetu-lightblue text-legalsetu-dark p-4 rounded-lg rounded-tl-none max-w-[80%] self-start mb-4;
   }
   
   .chat-message-bot {
     @apply bg-legalsetu-primary text-white p-4 rounded-lg rounded-tr-none max-w-[80%] self-end mb-4;
+  }
+  
+  .feature-card {
+    @apply bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border-t-4;
+  }
+  
+  .testimonial-card {
+    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-gray-100;
   }
 }

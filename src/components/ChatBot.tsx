@@ -52,18 +52,18 @@ const ChatBot = () => {
   }
   
   return (
-    <div className="fixed bottom-0 right-0 md:bottom-6 md:right-6 w-full md:w-96 h-[70vh] md:h-[500px] bg-white rounded-t-lg md:rounded-lg shadow-lg flex flex-col z-50 border border-gray-200">
+    <div className="fixed bottom-0 right-0 md:bottom-6 md:right-6 w-full md:w-96 h-[70vh] md:h-[520px] bg-white rounded-t-lg md:rounded-lg shadow-xl flex flex-col z-50 border border-gray-200 overflow-hidden">
       {/* Chat header */}
-      <div className="flex items-center justify-between p-4 border-b">
+      <div className="flex items-center justify-between p-4 bg-legalsetu-primary text-white">
         <div className="flex items-center">
-          <div className="h-8 w-8 bg-legalsetu-primary rounded-full flex items-center justify-center">
-            <MessageCircle size={16} className="text-white" />
+          <div className="h-8 w-8 bg-white rounded-full flex items-center justify-center">
+            <MessageCircle size={16} className="text-legalsetu-primary" />
           </div>
           <h3 className="ml-2 font-medium">LegalSetu Assistant</h3>
         </div>
         <div className="flex items-center space-x-2">
           <select 
-            className="text-sm border rounded-md px-2 py-1"
+            className="text-sm border rounded-md px-2 py-1 bg-white text-legalsetu-dark"
             value={selectedLanguage}
             onChange={(e) => setSelectedLanguage(e.target.value)}
           >
@@ -73,7 +73,7 @@ const ChatBot = () => {
           </select>
           <button 
             onClick={toggleChat}
-            className="text-gray-500 hover:text-gray-700"
+            className="text-white hover:text-gray-200"
           >
             <X size={20} />
           </button>
@@ -81,7 +81,7 @@ const ChatBot = () => {
       </div>
       
       {/* Chat messages */}
-      <div className="flex-1 overflow-y-auto p-4 bg-gray-50 space-y-3">
+      <div className="flex-1 overflow-y-auto p-4 bg-legalsetu-lightblue space-y-3">
         {chatHistory.map((chat, index) => (
           <div 
             key={index} 
@@ -90,8 +90,8 @@ const ChatBot = () => {
             <div 
               className={`max-w-[80%] p-3 rounded-lg ${
                 chat.role === 'user' 
-                  ? 'bg-legalsetu-primary text-white rounded-tr-none' 
-                  : 'bg-gray-200 text-gray-800 rounded-tl-none'
+                  ? 'bg-legalsetu-primary text-white rounded-tr-none shadow-md' 
+                  : 'bg-white text-gray-800 rounded-tl-none shadow-md'
               }`}
             >
               {chat.content}
@@ -113,7 +113,7 @@ const ChatBot = () => {
           />
           <div className="flex flex-col space-y-2">
             <button 
-              className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600"
+              className="p-2 rounded-full bg-legalsetu-lightblue hover:bg-gray-200 text-legalsetu-primary"
               aria-label="Voice input"
             >
               <Mic size={18} />

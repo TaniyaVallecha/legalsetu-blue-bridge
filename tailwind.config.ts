@@ -64,11 +64,13 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				legalsetu: {
-					primary: '#1EAEDB',
-					secondary: '#0FA0CE',
-					light: '#33C3F0',
+					primary: '#1B366A',      // Darker blue (main)
+					secondary: '#0D4C92',    // Secondary dark blue
+					light: '#5D8BF4',        // Light blue accent
 					gray: '#F6F6F7',
 					dark: '#222222',
+					accent: '#5271FF',      // Accent blue
+					lightblue: '#EDF2FB',   // Very light blue background
 				}
 			},
 			borderRadius: {
@@ -96,12 +98,17 @@ export default {
 				'float': {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-10px)' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'float': 'float 5s ease-in-out infinite'
+				'float': 'float 5s ease-in-out infinite',
+				'fade-in': 'fade-in 0.5s ease-out'
 			}
 		}
 	},

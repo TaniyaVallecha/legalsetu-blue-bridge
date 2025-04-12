@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCircle, FileText, Users, Shield, Globe, Zap, ThumbsUp, Gavel, Scale, BookOpen } from 'lucide-react';
+import { MessageCircle, FileText, Users, Shield, Globe, Zap, ThumbsUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -14,25 +14,25 @@ const HomePage = () => {
       
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-legalsetu-primary to-legalsetu-secondary py-40">
+        <section className="relative bg-gradient-to-r from-legalsetu-lightblue to-white py-20">
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] opacity-[0.07] mix-blend-overlay"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="animate-fade-in">
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                  Simplifying Legal Access <span className="text-legalsetu-lightblue">for Everyone</span>
+                <h1 className="text-4xl md:text-5xl font-bold text-legalsetu-primary mb-6 leading-tight">
+                  Simplifying Legal Access <span className="text-legalsetu-secondary">for Everyone</span>
                 </h1>
-                <p className="text-lg text-white/90 mb-8 leading-relaxed">
+                <p className="text-lg text-gray-700 mb-8 leading-relaxed">
                   Get instant legal assistance, document summaries, and connect with verified lawyers in your language.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Link to="/ask" className="no-underline">
-                    <Button className="bg-white hover:bg-legalsetu-lightblue text-legalsetu-primary hover:text-legalsetu-primary px-8 py-6 h-auto text-base shadow-lg">
+                  <Link to="/ask">
+                    <Button className="bg-legalsetu-primary hover:bg-legalsetu-secondary text-white px-8 py-6 h-auto text-base shadow-lg">
                       Ask a Question
                     </Button>
                   </Link>
-                  <Link to="/find-lawyer" className="no-underline">
-                    <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-6 h-auto text-base">
+                  <Link to="/find-lawyer">
+                    <Button variant="outline" className="border-legalsetu-primary text-legalsetu-primary hover:bg-legalsetu-lightblue px-8 py-6 h-auto text-base">
                       Find a Lawyer
                     </Button>
                   </Link>
@@ -40,9 +40,9 @@ const HomePage = () => {
               </div>
               <div className="hidden md:flex md:justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1589578527966-fdac0f44566c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" 
-                  alt="Scales of Justice" 
-                  className="max-h-[500px] w-auto object-contain rounded-lg shadow-2xl animate-float"
+                  src="/lovable-uploads/3e9d67e4-0a66-42dc-9e96-7b8cd314f583.png" 
+                  alt="Lady Justice" 
+                  className="max-h-[400px] w-auto animate-float object-contain"
                 />
               </div>
             </div>
@@ -69,7 +69,7 @@ const HomePage = () => {
                   <p className="text-gray-600 mb-6 flex-grow leading-relaxed">
                     Type or speak your legal issue in your language and get instant answers from our AI-powered assistant.
                   </p>
-                  <Link to="/ask" className="mt-auto no-underline">
+                  <Link to="/ask" className="mt-auto">
                     <Button className="w-full bg-legalsetu-primary hover:bg-legalsetu-secondary text-white">Start Chat</Button>
                   </Link>
                 </div>
@@ -86,7 +86,7 @@ const HomePage = () => {
                   <p className="text-gray-600 mb-6 flex-grow leading-relaxed">
                     Upload documents to get simple summaries, timelines, and key points of relevant law sections.
                   </p>
-                  <Link to="/summarize" className="mt-auto no-underline">
+                  <Link to="/summarize" className="mt-auto">
                     <Button className="w-full bg-legalsetu-primary hover:bg-legalsetu-secondary text-white">Upload & Analyze</Button>
                   </Link>
                 </div>
@@ -103,7 +103,7 @@ const HomePage = () => {
                   <p className="text-gray-600 mb-6 flex-grow leading-relaxed">
                     Search verified lawyers by language, expertise, and availability in your area for personalized advice.
                   </p>
-                  <Link to="/find-lawyer" className="mt-auto no-underline">
+                  <Link to="/find-lawyer" className="mt-auto">
                     <Button className="w-full bg-legalsetu-primary hover:bg-legalsetu-secondary text-white">Search Now</Button>
                   </Link>
                 </div>

@@ -14,7 +14,7 @@ const HomePage = () => {
       
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-legalsetu-primary to-legalsetu-secondary py-32">
+        <section className="relative bg-gradient-to-r from-legalsetu-primary to-legalsetu-secondary py-40">
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] opacity-[0.07] mix-blend-overlay"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -249,4 +249,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-

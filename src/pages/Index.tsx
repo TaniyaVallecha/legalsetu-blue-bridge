@@ -38,11 +38,11 @@ const HomePage = () => {
                   </Link>
                 </div>
               </div>
-              <div className="hidden md:block">
+              <div className="hidden md:flex md:justify-center">
                 <img 
                   src="/lovable-uploads/3e9d67e4-0a66-42dc-9e96-7b8cd314f583.png" 
                   alt="Lady Justice" 
-                  className="w-full h-auto rounded-lg shadow-xl animate-float object-contain"
+                  className="max-h-[400px] w-auto animate-float object-contain"
                 />
               </div>
             </div>
@@ -54,7 +54,7 @@ const HomePage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-legalsetu-primary">Our Services</h2>
-              <div className="mt-2 h-1 w-20 bg-legalsetu-accent mx-auto"></div>
+              <div className="mt-2 h-1 w-20 bg-legalsetu-primary mx-auto"></div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
@@ -77,9 +77,9 @@ const HomePage = () => {
               
               {/* Card 2 */}
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
-                <div className="h-3 bg-legalsetu-accent"></div>
+                <div className="h-3 bg-legalsetu-primary"></div>
                 <div className="p-6 flex flex-col h-full">
-                  <div className="bg-legalsetu-lightblue p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:bg-legalsetu-accent transition-all duration-300">
+                  <div className="bg-legalsetu-lightblue p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:bg-legalsetu-primary transition-all duration-300">
                     <FileText size={32} className="text-legalsetu-primary group-hover:text-white transition-all duration-300" />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-legalsetu-primary">Summarize a Legal Document</h3>
@@ -87,16 +87,16 @@ const HomePage = () => {
                     Upload documents to get simple summaries, timelines, and key points of relevant law sections.
                   </p>
                   <Link to="/summarize" className="mt-auto">
-                    <Button className="w-full bg-legalsetu-accent hover:bg-legalsetu-primary text-white">Upload & Analyze</Button>
+                    <Button className="w-full bg-legalsetu-primary hover:bg-legalsetu-secondary text-white">Upload & Analyze</Button>
                   </Link>
                 </div>
               </div>
               
               {/* Card 3 */}
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
-                <div className="h-3 bg-legalsetu-secondary"></div>
+                <div className="h-3 bg-legalsetu-primary"></div>
                 <div className="p-6 flex flex-col h-full">
-                  <div className="bg-legalsetu-lightblue p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:bg-legalsetu-secondary transition-all duration-300">
+                  <div className="bg-legalsetu-lightblue p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:bg-legalsetu-primary transition-all duration-300">
                     <Users size={32} className="text-legalsetu-primary group-hover:text-white transition-all duration-300" />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-legalsetu-primary">Find a Lawyer</h3>
@@ -104,7 +104,7 @@ const HomePage = () => {
                     Search verified lawyers by language, expertise, and availability in your area for personalized advice.
                   </p>
                   <Link to="/find-lawyer" className="mt-auto">
-                    <Button className="w-full bg-legalsetu-secondary hover:bg-legalsetu-primary text-white">Search Now</Button>
+                    <Button className="w-full bg-legalsetu-primary hover:bg-legalsetu-secondary text-white">Search Now</Button>
                   </Link>
                 </div>
               </div>
@@ -117,7 +117,7 @@ const HomePage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-legalsetu-primary">Why Choose LegalSetu?</h2>
-              <div className="mt-2 h-1 w-20 bg-legalsetu-accent mx-auto"></div>
+              <div className="mt-2 h-1 w-20 bg-legalsetu-primary mx-auto"></div>
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
@@ -129,17 +129,17 @@ const HomePage = () => {
                 <p className="text-gray-600">Get legal assistance in your regional language, making complex laws accessible to all.</p>
               </div>
               
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border-t-4 border-legalsetu-accent">
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border-t-4 border-legalsetu-primary">
                 <div className="flex items-center mb-4">
-                  <Zap size={24} className="text-legalsetu-accent mr-3" />
+                  <Zap size={24} className="text-legalsetu-primary mr-3" />
                   <h3 className="font-bold text-lg text-legalsetu-dark">AI-Powered</h3>
                 </div>
                 <p className="text-gray-600">Advanced AI technology to simplify complex legal information and provide accurate guidance.</p>
               </div>
               
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border-t-4 border-legalsetu-secondary">
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border-t-4 border-legalsetu-primary">
                 <div className="flex items-center mb-4">
-                  <FileText size={24} className="text-legalsetu-secondary mr-3" />
+                  <FileText size={24} className="text-legalsetu-primary mr-3" />
                   <h3 className="font-bold text-lg text-legalsetu-dark">Document Analysis</h3>
                 </div>
                 <p className="text-gray-600">Get quick, easy-to-understand summaries of legal documents with key points highlighted.</p>
@@ -161,7 +161,7 @@ const HomePage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-legalsetu-primary">What Users Say</h2>
-              <div className="mt-2 h-1 w-20 bg-legalsetu-accent mx-auto"></div>
+              <div className="mt-2 h-1 w-20 bg-legalsetu-primary mx-auto"></div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
@@ -189,7 +189,7 @@ const HomePage = () => {
               
               <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-gray-100">
                 <div className="flex items-center mb-4">
-                  <div className="h-12 w-12 rounded-full bg-legalsetu-accent flex items-center justify-center text-white font-semibold">
+                  <div className="h-12 w-12 rounded-full bg-legalsetu-primary flex items-center justify-center text-white font-semibold">
                     SP
                   </div>
                   <div className="ml-3">
@@ -211,7 +211,7 @@ const HomePage = () => {
               
               <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-gray-100">
                 <div className="flex items-center mb-4">
-                  <div className="h-12 w-12 rounded-full bg-legalsetu-secondary flex items-center justify-center text-white font-semibold">
+                  <div className="h-12 w-12 rounded-full bg-legalsetu-primary flex items-center justify-center text-white font-semibold">
                     MR
                   </div>
                   <div className="ml-3">

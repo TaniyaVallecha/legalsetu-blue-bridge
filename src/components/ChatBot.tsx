@@ -23,7 +23,7 @@ const ChatBot = () => {
     setTimeout(() => {
       setChatHistory(prev => [...prev, { 
         role: 'bot', 
-        content: 'Thanks for your question. I'm analyzing relevant legal information to provide you with the most accurate guidance. Please note that while I provide legal information, this should not be considered formal legal advice.' 
+        content: "Thanks for your question. I'm analyzing relevant legal information to provide you with the most accurate guidance. Please note that while I provide legal information, this should not be considered formal legal advice."
       }]);
     }, 1000);
   };
